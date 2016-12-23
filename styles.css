@@ -1,1 +1,116 @@
-
+body	{
+	margin: 0px;
+}
+div	{
+	color: white;
+}
+#phase	{
+	font-size: 20px;
+	font-family: Verdana;
+	color: black;
+}
+#instruct	{
+	color: black;
+	font-size: 18px;
+	font-family: Verdana;
+}
+#playDiv	{
+	width: 50%;
+	height: 50%;
+	background-color: violet;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	border-radius: 5%;
+}
+#playerNum 	{
+	height: 60px;
+	font-size: 50px;
+	width: 40%;
+	display: block;
+	position: relative;
+	left: 27%;
+	text-align: center;
+	background-color: red;
+	border: none;
+	border-radius: 100%;
+}
+#play 	{
+	background-color: red;
+	position: relative;
+	top: 110%;
+}
+.playerName	{
+	position: relative;
+	left: 27%;
+	height: 60px;
+	font-size: 50px;
+	width: 40%;
+	text-align: center;
+	border: none;
+	background-color: red;
+	border-radius: 100%;
+}
+.northAmerica	{
+	background-color: yellow;
+	height: 100px;
+	width: 49%;
+	display: inline-block;
+	margin-top: 2px;
+	border-radius: 10%;
+	text-align: center;
+	display: none;
+}
+.southAmerica	{
+	background-color: red;
+	height: 100px;
+	width: 49%;
+	display: inline-block;
+	margin-top: 2px;
+	border-radius: 10%;
+	text-align: center;
+	display: none;
+}
+.europe	{
+	background-color: blue;
+	height: 100px;
+	width: 49%;
+	display: inline-block;
+	margin-top: 2px;
+	color: white;
+	border-radius: 10%;
+	text-align: center;
+	display: none;
+}
+.africa	{
+	background-color: brown;
+	height: 100px;
+	width: 49%;
+	margin-top: 2px;
+	border-radius: 10%;
+	text-align: center;
+	display: none;
+}
+.asia	{
+	background-color: green;
+	height: 100px;
+	width: 49%;
+	display: inline-block;
+	margin-top: 2px;
+	border-radius: 10%;
+	text-align: center;
+	display: none;
+}
+.australia	{
+	background-color: gray;
+	height: 100px;
+	width: 49%;
+	display: inline-block;
+	margin-top: 2px;
+	border-radius: 10%;
+	text-align: center;
+	display: none;
+}
+*	{
+	font-family: cursive;
+}
