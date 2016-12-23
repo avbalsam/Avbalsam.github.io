@@ -1,3 +1,9 @@
+for (var i = 0; i < 100; i++) {
+	var elt = document.getElementById("button");
+	var cln = elt.cloneNode(true);
+	cln.id = "button" + i;
+	document.getElementById("helllo").appendChild(cln);
+}
 console.log(localStorage.clickCount);
 var whosTurn = 0;
 var moveFrom;
