@@ -17,8 +17,8 @@
 			display: inline-block;
 		}
 		#obstacle	{
-			height: 250px;
-			width: 250px;
+			height: 200px;
+			width: 100px;
 			background-color: red;
 			margin-left: 1000px;
 			margin-top: 500px;
@@ -43,18 +43,21 @@
 		var obstacleMargin = 1500;
 		var weight = 1;
 		var score = 0
+		var obstacleSpeed = 1;
 		var okPress = function()	{
 			ok = true;
 		}
 		var play = function(event)	{
 			setInterval(function(){
-				obstacleMargin -= 1;
+				obstacleMargin -= obstacleSpeed;
 				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
 				if(obstacleMargin < 200)	{
 					console.log(obstacleMargin);
 					console.log(height);
 					obstacleMargin = 1000;
-					if(obstacleHeight + 250 > height && obstacleHeight < height)	{
+					obstacleHeight = Math.floor(Math.random() * 350);
+					obstacleSpeed += .25;
+					if(obstacleHeight + 200 > height && obstacleHeight < height)	{
 						location.reload();
 					}
 				}
