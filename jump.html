@@ -37,7 +37,8 @@
 			document.getElementById('score').innerHTML = "Score: " + localStorage.score;
 		}
 		var ok = false;
-		document.getElementById('obstacle').style.marginTop = Math.floor(Math.random() * 350) + "px";
+		var obstacleHeight = Math.floor(Math.random() * 350);
+		document.getElementById('obstacle').style.marginTop = obstacleHeight + "px";
 		var lift = 30;
 		var obstacleMargin = 1500;
 		var weight = 1;
@@ -49,7 +50,12 @@
 			setInterval(function(){
 				obstacleMargin -= 1;
 				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
-
+				if(obstacleMargin === 200px)	{
+					if(obstacleHeight + 100 > height && obstacleHeight < height)	{
+						location.reload();
+					}
+					obstacleMargin = 1000;
+				}
 			}, 10);
 			setInterval(function(){
 			speedUp += weight;
