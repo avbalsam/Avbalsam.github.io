@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jump!</title>
+	<style type="text/css">
+		p 	{
+			display: inline-block;
+		}
+		#player	{
+			position: absolute;
+			height: 100px;
+			width: 124px;
+			margin-top: 0px;
+			margin-left: 15%;
+			background: url('flappy.png');
+			/*transform: translateX(5px); */
+			display: inline-block;
+		}
+		#obstacle	{
+			height: 100px;
+			width: 100px;
+			background-color: red;
+			margin-left: 1000px;
+			margin-top: 500px;
+			border-radius: 5px;
+			display: inline-block;
+			position: absolute;
+		}
+	</style>
+</head>
+<body onkeydown="play(event)" onkeyup="okPress()" id="body">
+	<div id="player"></div>
+	<div id="obstacle"></div>
+	<p style="font-family: cursive; font-size: 20px; font-weight: bold; position: absolute;" id="score">Score:</p>
+	<script type="text/javascript">
+		if (localStorage.score) {
+			document.getElementById('score').innerHTML = "Score: " + localStorage.score;
+		}
+		var ok = false;
+		document.getElementById('obstacle').style.marginTop = Math.floor(Math.random() * 350) + "px";
+		var lift = 30;
+		var obstacleMargin = 1500;
+		var weight = 1;
+		var score = 0
+		var okPress = function()	{
+			ok = true;
+		}
+		var play = function(event)	{
+			setInterval(function(){
+				obstacleMargin -= 1;
+				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
+
+			}, 10);
+			setInterval(function(){
+			speedUp += weight;
+			height += speedUp;
+			score++
+			document.getElementById('score').innerHTML = "Score: "+score;
+			document.getElementById('player').style.marginTop = height + "px"
+			if (height < 0 || height > 500) {
+				console.log('lost');
+				localStorage.score = score;
+				window.location.pathname = '/C:/Users/Balsams/Google%20Drive/Programs/Html/jump.html'
+			}
+			}, lift);
+			document.getElementById('body').setAttribute("onkeydown", "javascript: jump(event);");
+		}
+		var height = 1;
+		var speedUp = 0;
+		var jump = function(event)	{
+			if (ok) {
+				ok = false;
+				speedUp = -15;
+				console.log(document.getElementById('player').style.marginTop);
+			}
+		}
+	</script>
+</body>
+</html>
