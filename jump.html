@@ -60,7 +60,7 @@
 			if (height < 0 || height > 500) {
 				console.log('lost');
 				localStorage.score = score;
-				window.location.pathname = 'avbalsam.github.io/jump.html';
+				location.reload(true);
 			}
 			}, lift);
 			document.getElementById('body').setAttribute("onkeydown", "javascript: jump(event);");
