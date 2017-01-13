@@ -52,10 +52,6 @@
 				obstacleMargin -= 1;
 				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
 				if(obstacleMargin < 200)	{
-					console.log('baf');
-					if(obstacleHeight + 100 > height && obstacleHeight < height)	{
-						location.reload();
-					}
 					obstacleMargin = 1000;
 				}
 			}, 10);
