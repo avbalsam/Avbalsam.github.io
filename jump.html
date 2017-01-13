@@ -56,6 +56,7 @@
 					console.log(height);
 					obstacleMargin = 1000;
 					obstacleHeight = Math.floor(Math.random() * 350);
+					document.getElementById('obstacle').style.marginTop = obstacleHeight + 'px';
 					obstacleSpeed += .25;
 					if(obstacleHeight + 200 > height && obstacleHeight < height)	{
 						location.reload();
