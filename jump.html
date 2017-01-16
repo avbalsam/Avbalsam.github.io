@@ -51,7 +51,7 @@
 			setInterval(function(){
 				obstacleMargin -= obstacleSpeed;
 				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
-				if(obstacleMargin < 200 && obstacleHeight + 250 > height && obstacleHeight < height)	{
+				if(obstacleMargin < 200 && obstacleHeight + 250 > height && obstacleHeight < height && obstacleMargin > 150)	{
 					document.getElementById("body").style.display = "none";
 					location.reload();
 				}
