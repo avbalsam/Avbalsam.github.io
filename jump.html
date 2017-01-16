@@ -30,6 +30,7 @@
 </head>
 <body onkeydown="play(event)" onkeyup="okPress()" id="body" onclick="play(event)">
 	<div id="player"></div>
+	<div style="background-color: blue; margin-top: 520px;"></div>
 	<div id="obstacle"></div>
 	<p style="font-family: cursive; font-size: 20px; font-weight: bold; position: absolute;" id="score">Score:</p>
 	<script type="text/javascript">
@@ -70,7 +71,7 @@
 			score++
 			document.getElementById('score').innerHTML = "Score: "+score;
 			document.getElementById('player').style.marginTop = height + "px"
-			if (height < 0 || height > 510) {
+			if (height < 0 || height > 520) {
 				console.log('lost');
 				localStorage.score = score;
 				document.getElementById("body").style.display = "none";
