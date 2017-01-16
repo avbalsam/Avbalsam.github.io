@@ -55,7 +55,8 @@
 					console.log(obstacleMargin);
 					console.log(height);
 					obstacleMargin = 1000;
-					if(obstacleHeight + 200 > height && obstacleHeight < height)	{
+					if(obstacleHeight + 250 > height && obstacleHeight < height)	{
+						document.getElementById("body").style.display = "none";
 						location.reload();
 					}
 					obstacleHeight = Math.floor(Math.random() * 350);
