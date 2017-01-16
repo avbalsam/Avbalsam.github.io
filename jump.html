@@ -54,7 +54,7 @@
 				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
 			}, 10);
 			setInterval(function(){
-				if(obstacleMargin < 200 && obstacleHeight + 215 > height && obstacleHeight < height && obstacleMargin > 150)	{
+				if(obstacleMargin < 200 && obstacleHeight + 215 > height && obstacleHeight < height - 100 && obstacleMargin > 150)	{
 					document.getElementById("body").style.display = "none";
 					location.reload();
 				}	
