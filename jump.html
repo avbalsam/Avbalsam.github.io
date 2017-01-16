@@ -18,7 +18,7 @@
 		}
 		#obstacle	{
 			height: 200px;
-			width: 100px;
+			width: 200px;
 			background-color: red;
 			margin-left: 1000px;
 			margin-top: 500px;
@@ -51,11 +51,10 @@
 			setInterval(function(){
 				obstacleMargin -= obstacleSpeed;
 				document.getElementById('obstacle').style.marginLeft = obstacleMargin + "px";
-				if(obstacleMargin < 200 && obstacleHeight + 250 > height && obstacleHeight < height && obstacleMargin > 150)	{
+				if(obstacleMargin < 200 && obstacleHeight + 200 > height && obstacleHeight < height && obstacleMargin > 150)	{
 					document.getElementById("body").style.display = "none";
 					location.reload();
-				}
-					
+				}	
 				if(obstacleMargin < -200)	{
 					console.log(obstacleMargin);
 					console.log(height);
